@@ -1,9 +1,17 @@
 const contactsOperations = require('./db');
 
-const fs = require('fs/promises');
-// const fs = require("fs").promises;
+const { Command } = require('commander');
+const program = new Command();
+program
+  .option('-a, --action <type>', 'choose action')
+  .option('-i, --id <type>', 'user id')
+  .option('-n, --name <type>', 'user name')
+  .option('-e, --email <type>', 'user email')
+  .option('-p, --phone <type>', 'user phone');
 
-//const argv = require("yargs").argv;
+program.parse(process.argv);
+
+const argv = program.opts();
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
@@ -42,22 +50,4 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   }
 };
 
-//const id = '5';
-//const data = {
-//  name: 'Nazarii Lozynskyi',
-//  email: 'nazarko.l.m@gmail.com',
-//  phone: '+48 502-503-172',
-//};
-//const updateId = '09d56270-5baa-11ec-bbec-eb95ad181429';
-//const updateData = {
-//  name: 'Kristina Mateichuk',
-//  email: 'kristina@gmail.com',
-//  phone: '+48 257-787-192',
-//};
-const removeId = '03b0a940-5baa-11ec-b146-5dd5f058058d';
-
-//invokeAction({ action: 'getAll' });
-//invokeAction({ action: 'getById', id });
-//invokeAction({ action: 'add', ...data });
-//invokeAction({ action: 'updateById', ...updateData, id: updateId });
-invokeAction({ action: 'removeById', id: removeId });
+invokeAction(argv);
