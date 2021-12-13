@@ -1,5 +1,5 @@
 [
-   {
+  {
     "id": "1",
     "name": "Allen Raymond",
     "email": "nulla.ante@vestibul.co.uk",
@@ -10,12 +10,6 @@
     "name": "Chaim Lewis",
     "email": "dui.in@egetlacus.ca",
     "phone": "(294) 840-6685"
-  },
-  {
-    "id": "3",
-    "name": "Kennedy Lane",
-    "email": "mattis.Cras@nonenimMauris.net",
-    "phone": "(542) 451-7038"
   },
   {
     "id": "4",
@@ -64,5 +58,11 @@
     "name": "Kristina Mateichuk",
     "email": "kristina@gmail.com",
     "phone": "+48 257-787-192"
+  },
+  {
+    "id": "80bcd570-5bb5-11ec-9a7e-17502f8a2723",
+    "name": "Mango",
+    "email": "mango@gmail.com",
+    "phone": "322-22-22"
   }
 ]
